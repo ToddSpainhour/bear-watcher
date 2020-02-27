@@ -1,1 +1,6 @@
-console.log('Your Javascript is connected!')
+
+const init = () => {
+    console.log('hello from inside your init function')
+};
+
+init();
