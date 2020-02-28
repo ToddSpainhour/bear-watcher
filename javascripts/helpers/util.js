@@ -3,8 +3,13 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
   };
   
-const fromUtil = () => {
-    console.log('hello from deep within yourutil.js file. this means your util is exporting')
-}
+// const fromUtil = () => {
+//     console.log('hello from deep within yourutil.js file. this means your util is exporting')
+// }
 
-  export { fromUtil };
+
+  // i added default and removed {} around print to dom
+
+
+  export { printToDom } 
+  
