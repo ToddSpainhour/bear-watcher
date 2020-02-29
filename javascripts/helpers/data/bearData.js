@@ -2,7 +2,9 @@
 
 const bearArray = [];
 
-
+const showMeTheBearArray = () => {
+    console.log(bearArray)
+}
 
 const userEnteredBearData = (e) => {
 
@@ -13,6 +15,7 @@ const userEnteredBearData = (e) => {
     console.log("this is from within your userEnteredBearData in the bearData.js file")
     console.log(userBearName + " " + userBearImage)
     // console.log("hello" + bearArray.push({name: userBearName, image: userBearImage}));
+    showMeTheBearArray();
     e.preventDefault();
     // return   
 }
@@ -26,3 +29,4 @@ console.log("from inside your bear function" + bearArray);
 export { userEnteredBearData };
 export { bears };
 export { bearArray }
+export { showMeTheBearArray }
