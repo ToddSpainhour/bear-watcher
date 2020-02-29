@@ -1,6 +1,26 @@
 
 
 import { printToDom } from "../helpers/util.js"
+import { userEnteredBearData } from "../helpers/data/bearData.js"
+
+
+
+const bearFormSubmitButtonEvent = () => {
+    const submitBear = document.getElementById('bear-info-submit-button');
+    submitBear.addEventListener('click', userEnteredBearData )
+
+}
+
+
+// const userEnteredBearData = () => {
+
+//     const userBearName = document.getElementById('bear-name-input-field').value;
+//     const userBearImage = document.getElementById('bear-image-input-field').value;
+//     console.log(`See if these pushed to the array${userBearName} ${userBearImage}`);
+//     event.preventDefault();
+//     bears.push({name: `${userBearName}`, image: `${userBearImage}`})
+// }
+
 
 
 
@@ -12,14 +32,14 @@ const makeBearForm = () => {
         domString += `<form class="col-md-4 bg-dark mx-auto">`
 
         domString +=    `<div class="form-group">`
-        domString +=        `<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Bear Name">`
+        domString +=        `<input type="text" class="form-control" id="bear-name-input-field" aria-describedby="emailHelp" placeholder="Enter Bear Name">`
         domString +=            `</div>`
 
         domString +=    `<div class="form-group">`
-        domString +=        `<input type="text" class="form-control" id="Image URL" placeholder="Enter Bear Image URL">`
+        domString +=        `<input type="text" class="form-control" id="bear-image-input-field" placeholder="Enter Bear Image URL">`
         domString +=            `</div>`
 
-        domString +=    `<button type="submit" class="btn btn-secondary">Submit</button>`
+        domString +=    `<button type="submit" id="bear-info-submit-button" class="btn btn-secondary">Submit</button>`
 
         domString += `</form>`
         }
@@ -28,5 +48,5 @@ const makeBearForm = () => {
 
 }
 
-
-export default makeBearForm;  
+ //do i need to export a different way?
+export { makeBearForm, bearFormSubmitButtonEvent, /*userEnteredBearData*/ };  
