@@ -4,25 +4,11 @@ import { printToDom } from "../helpers/util.js"
 import { userEnteredBearData } from "../helpers/data/bearData.js"
 
 
-
 const bearFormSubmitButtonEvent = () => {
     const submitBear = document.getElementById('bear-info-submit-button');
     submitBear.addEventListener('click', userEnteredBearData )
 
 }
-
-
-// const userEnteredBearData = () => {
-
-//     const userBearName = document.getElementById('bear-name-input-field').value;
-//     const userBearImage = document.getElementById('bear-image-input-field').value;
-//     console.log(`See if these pushed to the array${userBearName} ${userBearImage}`);
-//     event.preventDefault();
-//     bears.push({name: `${userBearName}`, image: `${userBearImage}`})
-// }
-
-
-
 
 const makeBearForm = () => {
     let domString= '';

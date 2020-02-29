@@ -1,5 +1,6 @@
 // import userEnteredBearData from "../data/
 
+
 const bearArray = [];
 
 const showMeTheBearArray = () => {
@@ -12,12 +13,8 @@ const userEnteredBearData = (e) => {
     const userBearImage = document.getElementById('bear-image-input-field').value;
 
     bearArray.push({name: userBearName, image: userBearImage})
-    console.log("this is from within your userEnteredBearData in the bearData.js file")
-    console.log(userBearName + " " + userBearImage)
-    // console.log("hello" + bearArray.push({name: userBearName, image: userBearImage}));
     showMeTheBearArray();
-    e.preventDefault();
-    // return   
+    e.preventDefault();   
 }
 
 

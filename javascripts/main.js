@@ -1,10 +1,8 @@
-//hot to import multiple functions?
-// import makeBearForm from '../javascripts/components/bearForm.js';
-import { makeBearForm, bearFormSubmitButtonEvent, /*userEnteredBearData*/ } from '../javascripts/components/bearForm.js';
+
+import { makeBearForm, bearFormSubmitButtonEvent } from '../javascripts/components/bearForm.js';
 import { userEnteredBearData } from '../javascripts/helpers/data/bearData.js'
-// import { bears } from '../javascripts/helpers/data/bearData.js'
-// import { bearArray } from '../javascripts/helpers/data/bearData.js'
 import { showMeTheBearArray } from '../javascripts/helpers/data/bearData.js'
+import { makeRiverCards } from '../javascripts/components/river.js'
 
 
 
@@ -13,6 +11,7 @@ const init = () => {
     bearFormSubmitButtonEvent();  
     // bears();
     showMeTheBearArray();
+    makeRiverCards();
 };
 
 init();
