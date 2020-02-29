@@ -1,6 +1,7 @@
 
 
 import { printToDom } from "../helpers/util.js"
+import { userEnteredBearData } from "../helpers/data/bearData.js"
 
 
 
@@ -11,14 +12,14 @@ const bearFormSubmitButtonEvent = () => {
 }
 
 
-const userEnteredBearData = () => {
+// const userEnteredBearData = () => {
 
-    const userBearName = document.getElementById('bear-name-input-field').value;
-    const userBearImage = document.getElementById('bear-image-input-field').value
-    console.log(`${userBearName} ${userBearImage}`);
-    event.preventDefault();
-
-}
+//     const userBearName = document.getElementById('bear-name-input-field').value;
+//     const userBearImage = document.getElementById('bear-image-input-field').value;
+//     console.log(`See if these pushed to the array${userBearName} ${userBearImage}`);
+//     event.preventDefault();
+//     bears.push({name: `${userBearName}`, image: `${userBearImage}`})
+// }
 
 
 
@@ -48,4 +49,4 @@ const makeBearForm = () => {
 }
 
  //do i need to export a different way?
-export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData };  
+export { makeBearForm, bearFormSubmitButtonEvent, /*userEnteredBearData*/ };  
