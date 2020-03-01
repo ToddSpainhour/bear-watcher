@@ -1,29 +1,27 @@
-// import userEnteredBearData from "../data/
+import { userEnteredBearData } from '../../components/bearForm.js'
 
 
-const bearArray = [];
 
-const showMeTheBearArray = () => {
-    console.log(bearArray)
-}
 
-const userEnteredBearData = (e) => {
+const bearArray = [
+    {name: 'Billy the Bear', image: "https://vignette.wikia.nocookie.net/tier-zoo/images/5/57/Bear.jpg/revision/latest?cb=20190305130323"}
+];
 
-    const userBearName = document.getElementById('bear-name-input-field').value;
-    const userBearImage = document.getElementById('bear-image-input-field').value;
 
-    bearArray.push({name: userBearName, image: userBearImage})
-    showMeTheBearArray();
-    e.preventDefault();   
+
+
+const addTheBears = () => {
+bearArray.push(userEnteredBearData)
 }
 
 
 
-const bears = () => {
-console.log("from inside your bear function" + bearArray);
+
+const getTheBears = () => {
+    return bearArray
 }
 
-export { userEnteredBearData };
-export { bears };
-export { bearArray }
-export { showMeTheBearArray }
+
+
+
+export { getTheBears }
