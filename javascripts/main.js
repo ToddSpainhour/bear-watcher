@@ -57,7 +57,8 @@ const makeBearForm = () => {
 
 const bearFormSubmitButtonEvent = () => {
     const submitBear = document.getElementById('bear-info-submit-button');
-    submitBear.addEventListener('click', userEnteredBearData )
+    submitBear.addEventListener('click', userEnteredBearData );
+    // makeRiverCards(bearArray);
 };
 
 
@@ -74,29 +75,35 @@ const userEnteredBearData = (e) => {
     // console.log("the user entered " + userBearName + " " + userBearImage + " this is from your userEnteredBearData function in bearForm.js");
     bearArray.push({name: userBearName, image: userBearImage});
     bearArray.forEach(makeRiverCards);
+    console.log(bearArray)
     e.preventDefault();
-    // makeRiverCards(bearArray);  this returns undefined
+    makeRiverCards(bearArray);  
 };
 
-
+//i called the make makeRiverCards function with an argument of bearArray
+//i also changed all the makeRiverCard parameters to arr
 
 
 //river
 const makeRiverCards = (arr) => {
     let domString = '';
-    for (let i = 0; i < bearArray.length; i++){
-    if ( 1 === 1) {
+    for (let i = 0; i < arr.length; i++) {
+    
+//i stopped here after adding the [i] to each key value pair
+    // domString +=   `<div class="row>`
+    // domString +=   `<div class="row">`
+    domString +=   `<div class="card">`
+    domString +=            `<img src="${arr[i].image}" class="card-img-top" alt="...">`
+    domString +=        `<div class="card-body col-6">`
+    domString +=            `<p class="card-text">${arr[i].name}</p>`
+    domString +=        `</div>`
+    domString +=   `</div>`
+    // domString +=   `</div>`
 
-domString +=   `<div class="card" style="width: 18rem;">`
-domString +=   `<img src="${arr.image}" class="card-img-top" alt="...">`
-domString +=   `<div class="card-body">`
-domString +=   `<p class="card-text">${arr.name}</p>`
-domString +=   `</div>`
-domString +=   `</div>`
-console.log('this is from within your makeRiverCards functionin river.js')
-}
-    printToDom('printRiverCardsHere', domString); 
-}
+
+    console.log('this is from within your makeRiverCards functionin river.js')
+    printToDom('printRiverCardsHere', domString);  
+};
 };
 
 
