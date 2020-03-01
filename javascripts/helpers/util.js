@@ -4,5 +4,5 @@ const printToDom = (divId, textToPrint) => {
   };
   
 
-  export { printToDom } 
+  // export { printToDom } 
   

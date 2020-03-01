@@ -1,24 +1,28 @@
-import { printToDom } from "../helpers/util.js"
-import { getTheBears } from "../helpers/data/bearData.js"
+// import { getTheBears } from "../helpers/data/bearData.js"
+// import { userEnteredBearData, bearFormSubmitButtonEvent} from "../components/bearForm.js"
+// import { printToDom } from "../helpers/util.js"
 
-
+//figure out how to connect the data from userEnteredBearData to the river cards area below
 
 const makeRiverCards = () => {
     let domString= '';
+    const newBear =  getTheBears();
+
 
     if ( 1 === 1) {
 
 domString +=   `<div class="card" style="width: 18rem;">`
-domString +=   `<img src="${bearData.userEnteredBearData}" class="card-img-top" alt="...">`
+domString +=   `<img src="${getTheBears.name}" class="card-img-top" alt="...">`
 domString +=   `<div class="card-body">`
-domString +=   `<p class="card-text">${bearData.userEnteredBearData}</p>`
+domString +=   `<p class="card-text">${getTheBears.image}</p>`
 domString +=   `</div>`
 domString +=   `</div>`
-console.log('inside your makeRiverCards function')
+console.log('this is from within your makeRiverCards functionin river.js')
 }
-    util.printToDom('printRiverCardsHere', domString); 
+    printToDom('printRiverCardsHere', domString); 
+    // makeRiverCards();
 }
 
-// makeRiverCards();
 
-export { makeRiverCards }
+
+// export { makeRiverCards }
