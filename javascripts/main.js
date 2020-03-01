@@ -5,16 +5,12 @@
 
 
 //bearData
-const bearArray = [
-    {name: 'Billy the Bear', image: "https://vignette.wikia.nocookie.net/tier-zoo/images/5/57/Bear.jpg/revision/latest?cb=20190305130323"},
-];
+const bearArray = [];
 
 
 const getTheBears = () => {
     return bearArray
 };
-
-
 
 
 
@@ -71,17 +67,15 @@ const bearFormSubmitButtonEvent = () => {
 
 
 //copy userEnteredBearData from here and put in river. no just call the function there
-const userEnteredBearData = () => {
+const userEnteredBearData = (e) => {
 
     const userBearName = document.getElementById('bear-name-input-field').value;
     const userBearImage = document.getElementById('bear-image-input-field').value;
-    console.log("the user entered " + userBearName + " " + userBearImage + " this is from your userEnteredBearData function in bearForm.js");
-    // makeRiverCards(); 
-    // const newBear = {name: userBearName, image: userBearImage};
+    // console.log("the user entered " + userBearName + " " + userBearImage + " this is from your userEnteredBearData function in bearForm.js");
     bearArray.push({name: userBearName, image: userBearImage});
-    // makeRiverCards(bearArray);
-    bearArray.forEach(makeRiverCards)
-    // return newBear    
+    bearArray.forEach(makeRiverCards);
+    e.preventDefault();
+    // makeRiverCards(bearArray);  this returns undefined
 };
 
 
@@ -90,8 +84,7 @@ const userEnteredBearData = () => {
 //river
 const makeRiverCards = (arr) => {
     let domString = '';
-    // const newBear =  getTheBears();
-
+    for (let i = 0; i < bearArray.length; i++){
     if ( 1 === 1) {
 
 domString +=   `<div class="card" style="width: 18rem;">`
@@ -103,14 +96,13 @@ domString +=   `</div>`
 console.log('this is from within your makeRiverCards functionin river.js')
 }
     printToDom('printRiverCardsHere', domString); 
-    // makeRiverCards();
 }
+};
 
 
 const events = () => {
     bearFormSubmitButtonEvent();
-
-}
+};
 
   
 
@@ -118,8 +110,9 @@ const events = () => {
 const init = () => {
     makeBearForm();
     events();
-    // makeRiverCards();  
 };
+
+
 
 init();
 
