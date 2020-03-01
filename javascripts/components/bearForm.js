@@ -1,16 +1,12 @@
 
 
-import { printToDom } from "../helpers/util.js"
-import { userEnteredBearData } from "../helpers/data/bearData.js"
+import { printToDom } from "../helpers/util.js";
+import { makeRiverCards } from "./river.js";
 
 
-const bearFormSubmitButtonEvent = () => {
-    const submitBear = document.getElementById('bear-info-submit-button');
-    submitBear.addEventListener('click', userEnteredBearData )
-
-}
 
 const makeBearForm = () => {
+
     let domString= '';
 
     if ( 1 === 1) {
@@ -25,8 +21,8 @@ const makeBearForm = () => {
         domString +=        `<input type="text" class="form-control" id="bear-image-input-field" placeholder="Enter Bear Image URL">`
         domString +=            `</div>`
 
-        domString +=    `<button type="submit" id="bear-info-submit-button" class="btn btn-secondary">Submit</button>`
-
+        domString +=    `<button type="button" id="bear-info-submit-button" class="btn btn-secondary">Submit</button>`
+//changed above button type to button instead of submit
         domString += `</form>`
         }
 
@@ -34,5 +30,32 @@ const makeBearForm = () => {
 
 }
 
- //do i need to export a different way?
-export { makeBearForm, bearFormSubmitButtonEvent, /*userEnteredBearData*/ };  
+
+
+const bearFormSubmitButtonEvent = () => {
+    const submitBear = document.getElementById('bear-info-submit-button');
+    submitBear.addEventListener('click', userEnteredBearData )
+    
+    // e.preventDefault();
+}
+
+const userEnteredBearData = () => {
+
+    const userBearName = document.getElementById('bear-name-input-field').value;
+    const userBearImage = document.getElementById('bear-image-input-field').value;
+    console.log("the user entered " + userBearName + " " + userBearImage);
+    return {name: userBearName, image: userBearImage}
+    // bearArray.push({name: userBearName, image: userBearImage});
+    //find a way to expot this instead of pushing it?
+    // const newBear = bearData.bearArray.push({name: userBearName, image: userBearImage})
+    // makeRiverCards();
+    // console.log(newBear+ " this is from inside the userEntered BearDataevent")
+}
+
+// const newBear = () => {
+
+// }
+
+// const bearArray = [];
+ 
+export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData };  
