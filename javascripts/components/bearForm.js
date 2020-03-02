@@ -1,13 +1,13 @@
 
-
-import { printToDom } from "../helpers/util.js";
-import { makeRiverCards } from "./river.js";
+import printToDom from "../helpers/util.js"
+import makeRiverCards from "../components/river.js"
+import { bearArray } from "../helpers/data/bearData.js"
 
 
 
 const makeBearForm = () => {
 
-    let domString= '';
+    let domString = '';
 
     if ( 1 === 1) {
 
@@ -22,40 +22,32 @@ const makeBearForm = () => {
         domString +=            `</div>`
 
         domString +=    `<button type="button" id="bear-info-submit-button" class="btn btn-secondary">Submit</button>`
-//changed above button type to button instead of submit
+
         domString += `</form>`
         }
 
-    printToDom('printBearFormHere', domString); //do i need to call it differently since i'm importing it?S
+    printToDom('printBearFormHere', domString); 
 
-}
+};
 
 
 
 const bearFormSubmitButtonEvent = () => {
     const submitBear = document.getElementById('bear-info-submit-button');
-    submitBear.addEventListener('click', userEnteredBearData )
-    
-    // e.preventDefault();
-}
+    submitBear.addEventListener('click', userEnteredBearData );
+};
 
-const userEnteredBearData = () => {
+
+
+const userEnteredBearData = (e) => {
 
     const userBearName = document.getElementById('bear-name-input-field').value;
     const userBearImage = document.getElementById('bear-image-input-field').value;
-    console.log("the user entered " + userBearName + " " + userBearImage);
-    return {name: userBearName, image: userBearImage}
-    // bearArray.push({name: userBearName, image: userBearImage});
-    //find a way to expot this instead of pushing it?
-    // const newBear = bearData.bearArray.push({name: userBearName, image: userBearImage})
-    // makeRiverCards();
-    // console.log(newBear+ " this is from inside the userEntered BearDataevent")
-}
+    bearArray.push({name: userBearName, image: userBearImage});
+    // bearArray.forEach(makeRiverCards);
+    e.preventDefault();
+    makeRiverCards(bearArray);  
+};
 
-// const newBear = () => {
 
-// }
-
-// const bearArray = [];
- 
-export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData };  
+export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData }
