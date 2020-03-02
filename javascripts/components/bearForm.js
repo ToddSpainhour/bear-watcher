@@ -1,8 +1,6 @@
-
 import printToDom from "../helpers/util.js"
 import makeRiverCards from "../components/river.js"
 import { bearArray } from "../helpers/data/bearData.js"
-
 
 
 const makeBearForm = () => {

@@ -1,8 +1,4 @@
-
 import printToDom from "../helpers/util.js"
-
-
-
 
 
 const makeRiverCards = (arr) => {
@@ -20,5 +16,6 @@ const makeRiverCards = (arr) => {
     printToDom('printRiverCardsHere', domString);  
 };
 };
+
 
 export default makeRiverCards
