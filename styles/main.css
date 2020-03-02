@@ -2,14 +2,33 @@ body {
     background-color: olive;
 }
 
-/* font-family: 'Shadows Into Light', ; */
+.header-background {
+background-color: peru;
+margin-top: 25px;
+margin-bottom: 25px;
+border-style: solid;
+border-color: darkolivegreen;
+border-left: 0px;
+border-right: 0px;
+border-bottom-width: 15px;
+border-top-width: 15px;
+}
 
 h1 {
     font-family: 'Shadows Into Light';
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 5rem;
+}
+
+h3 {
+    font-family: 'Shadows Into Light';
+    font-weight: bolder;
 }
 
 p {
     font-family: 'Shadows Into Light'; 
+}
+
+img {
+    width: 100%;
 }

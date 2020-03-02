@@ -11,7 +11,7 @@ const makeBearForm = () => {
 
     if ( 1 === 1) {
 
-        domString += `<form class="col-md-4 bg-dark mx-auto">`
+        domString += `<form class="col-md-4 bg-dark mx-auto pt-3 pb-3">`
 
         domString +=    `<div class="form-group">`
         domString +=        `<input type="text" class="form-control" id="bear-name-input-field" aria-describedby="emailHelp" placeholder="Enter Bear Name">`
@@ -21,7 +21,7 @@ const makeBearForm = () => {
         domString +=        `<input type="text" class="form-control" id="bear-image-input-field" placeholder="Enter Bear Image URL">`
         domString +=            `</div>`
 
-        domString +=    `<button type="button" id="bear-info-submit-button" class="btn btn-secondary">Submit</button>`
+        domString +=    `<button type="button" id="bear-info-submit-button" class="btn btn-secondary btn-block">Submit</button>`
 
         domString += `</form>`
         }
