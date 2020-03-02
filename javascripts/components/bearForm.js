@@ -1,14 +1,13 @@
 
+import printToDom from "../helpers/util.js"
+import makeRiverCards from "../components/river.js"
+import { bearArray } from "../helpers/data/bearData.js"
 
-// import { printToDom } from "../helpers/util.js";
-// import { makeRiverCards } from "./river.js";
-// import { getTheBears } from "../helpers/data/bearData.js"
 
-let newBear = '';
 
 const makeBearForm = () => {
 
-    let domString= '';
+    let domString = '';
 
     if ( 1 === 1) {
 
@@ -29,29 +28,26 @@ const makeBearForm = () => {
 
     printToDom('printBearFormHere', domString); 
 
-}
+};
 
 
 
 const bearFormSubmitButtonEvent = () => {
     const submitBear = document.getElementById('bear-info-submit-button');
-    submitBear.addEventListener('click', userEnteredBearData )
+    submitBear.addEventListener('click', userEnteredBearData );
 };
 
 
-//copy userEnteredBearData from here and put in river. no just call the function there
-const userEnteredBearData = () => {
+
+const userEnteredBearData = (e) => {
 
     const userBearName = document.getElementById('bear-name-input-field').value;
     const userBearImage = document.getElementById('bear-image-input-field').value;
-    console.log("the user entered " + userBearName + " " + userBearImage + " this is from your userEnteredBearData function in bearForm.js");
-    // makeRiverCards(); 
-    return newBear = {name: userBearName, image: userBearImage}     
+    bearArray.push({name: userBearName, image: userBearImage});
+    // bearArray.forEach(makeRiverCards);
+    e.preventDefault();
+    makeRiverCards(bearArray);  
 };
 
 
-
-
-
- 
-// export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData };  
+export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData }
