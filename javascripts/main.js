@@ -1,7 +1,3 @@
-
-// import { makeBearForm, bearFormSubmitButtonEvent } from '../javascripts/components/bearForm.js';
-// import { makeRiverCards } from '../javascripts/components/river.js'
-
 import { makeBearForm, bearFormSubmitButtonEvent } from "../javascripts/components/bearForm.js"
 
 

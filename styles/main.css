@@ -3,15 +3,15 @@ body {
 }
 
 .header-background {
-background-color: peru;
-margin-top: 25px;
-margin-bottom: 25px;
-border-style: solid;
-border-color: darkolivegreen;
-border-left: 0px;
-border-right: 0px;
-border-bottom-width: 15px;
-border-top-width: 15px;
+    background-color: peru;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-style: solid;
+    border-color: darkolivegreen;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-width: 15px;
+    border-top-width: 15px;
 }
 
 h1 {
