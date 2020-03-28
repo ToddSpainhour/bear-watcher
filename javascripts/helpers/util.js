@@ -3,6 +3,5 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
 };
   
-
 export default printToDom 
   
