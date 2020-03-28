@@ -1,7 +1,3 @@
-body {
-    background-color: olive;
-}
-
 .header-background {
     background-color: peru;
     margin-top: 25px;
@@ -12,6 +8,10 @@ body {
     border-right: 0px;
     border-bottom-width: 15px;
     border-top-width: 15px;
+}
+
+body {
+    background-color: olive;
 }
 
 h1 {

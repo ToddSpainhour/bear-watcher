@@ -7,35 +7,22 @@ const makeBearForm = () => {
 
     let domString = '';
 
-    if ( 1 === 1) {
-
         domString += `<form class="col-md-4 bg-dark mx-auto pt-3 pb-3">`
-
-        domString +=    `<div class="form-group">`
-        domString +=        `<input type="text" class="form-control" id="bear-name-input-field" aria-describedby="emailHelp" placeholder="Enter Bear Name">`
-        domString +=            `</div>`
-
-        domString +=    `<div class="form-group">`
-        domString +=        `<input type="text" class="form-control" id="bear-image-input-field" placeholder="Enter Bear Image URL">`
-        domString +=            `</div>`
-
-        domString +=    `<button type="button" id="bear-info-submit-button" class="btn btn-secondary btn-block">Submit</button>`
-
+        domString += `<div class="form-group">`
+        domString += `<input type="text" class="form-control" id="bear-name-input-field" aria-describedby="emailHelp" placeholder="Enter Bear Name">`
+        domString += `</div>`
+        domString += `<div class="form-group">`
+        domString += `<input type="text" class="form-control" id="bear-image-input-field" placeholder="Enter Bear Image URL">`
+        domString += `</div>`
+        domString += `<button type="button" id="bear-info-submit-button" class="btn btn-secondary btn-block">Submit</button>`
         domString += `</form>`
+        printToDom('printBearFormHere', domString); 
         }
-
-    printToDom('printBearFormHere', domString); 
-
-};
-
-
 
 const bearFormSubmitButtonEvent = () => {
     const submitBear = document.getElementById('bear-info-submit-button');
     submitBear.addEventListener('click', userEnteredBearData );
 };
-
-
 
 const userEnteredBearData = (e) => {
 
@@ -46,6 +33,5 @@ const userEnteredBearData = (e) => {
     e.preventDefault();
     makeRiverCards(bearArray);  
 };
-
 
 export { makeBearForm, bearFormSubmitButtonEvent, userEnteredBearData }
