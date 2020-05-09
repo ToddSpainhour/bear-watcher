@@ -1,5 +1,5 @@
 import printToDom from "../helpers/util.js"
-import makeRiverCards from "../components/river.js"
+import makeRiverCards from "./river.js"
 import { bearArray } from "../helpers/data/bearData.js"
 
 
@@ -29,7 +29,6 @@ const userEnteredBearData = (e) => {
     const userBearName = document.getElementById('bear-name-input-field').value;
     const userBearImage = document.getElementById('bear-image-input-field').value;
     bearArray.push({name: userBearName, image: userBearImage});
-    // bearArray.forEach(makeRiverCards);
     e.preventDefault();
     makeRiverCards(bearArray);  
 };

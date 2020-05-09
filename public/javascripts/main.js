@@ -1,4 +1,4 @@
-import { makeBearForm, bearFormSubmitButtonEvent } from "../javascripts/components/bearForm.js"
+import { makeBearForm, bearFormSubmitButtonEvent } from "./components/bearForm.js"
 
 const events = () => {
     bearFormSubmitButtonEvent();
@@ -10,5 +10,3 @@ const init = () => {
 };
 
 init();
-
-
